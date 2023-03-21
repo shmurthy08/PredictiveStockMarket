@@ -11,7 +11,7 @@ import os
 
 def get_user_input():
     stockName = input("Enter the name of stock(s) that you want to predict: ")
-    parseStocks = [s.strip() for s in stockName.split(',')]
+    parseStocks = [s.strip() for s in stockName.split(' ')]
     gather_stock_info(parseStocks)
 
 
@@ -81,9 +81,9 @@ def predictData(data):
     
     #Calculate MSE
     mse = mean_squared_error(test_data['Adjusted Close'], y_pred)
-    print(f"R2 score: {r2}")
-    print(f"MSE: {mse}")
-    print(ans) 
+    # print(f"R2 score: {r2}")
+    # print(f"MSE: {mse}")
+    # print(ans) 
 
     
     
